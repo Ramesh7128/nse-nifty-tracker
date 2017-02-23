@@ -21,6 +21,11 @@ class StackMirror(object):
         sorted_stock_list = sorted(stock_list, key=lambda k: float(k["% Change"]), reverse=True)
         return json.dumps(sorted_stock_list)
 
+
+
+cherrypy.config.update({'server.socket_host': '0.0.0.0',
+                        'server.socket_port': 80,
+                       })
 cherrypy.quickstart(StackMirror(), "/", { "/static": {
                         "tools.staticdir.on": True,
                         "tools.staticdir.dir" : path.join(path.abspath(curdir), "static")}})
