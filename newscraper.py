@@ -1,5 +1,5 @@
 from xvfbwrapper import Xvfb
-
+from selenium import webdriver
 vdisplay = Xvfb()
 vdisplay.start()
 
