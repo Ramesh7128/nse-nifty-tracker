@@ -52,7 +52,7 @@ def nse_data_scraper():
 if __name__ == "__main__":
 	while True:
 		nse_data_scraper()
-		time.sleep(120.0 - ((time.time() - starttime) % 60.0))
+		time.sleep(300.0 - ((time.time() - starttime) % 60.0))
 
 
 

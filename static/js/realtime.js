@@ -32,7 +32,7 @@ function doPoll() {
     }).done(function (data) {
         append_to_dom(data);
     }).always(function () {
-        setTimeout(doPoll, 50000);
+        setTimeout(doPoll, 60000);
     })
 }
 
