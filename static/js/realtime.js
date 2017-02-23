@@ -23,7 +23,7 @@ function append_to_dom(data) {
     $("#realtime").html(blocks).hide().fadeIn();
 }
 
-function doPoll() {
+function ajaxPolling() {
     $.ajax({
         url: "update",
         data: {
@@ -37,6 +37,6 @@ function doPoll() {
 }
 
 $(document).ready(function () {
-    doPoll();
+    ajaxPolling();
 })
 

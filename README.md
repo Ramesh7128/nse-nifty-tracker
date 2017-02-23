@@ -21,5 +21,6 @@ A simple web app built using Cherrypy to track nse and display the top gainers t
 ### Local Deployment
 		Run the below command from the root directory where supervisord.conf file is present
 		cmd: supervisord -c supervisord.conf
+
 	
 	
