@@ -1,0 +1,29 @@
+body {
+  background-color: #67BCDB;
+}
+
+h1 { 
+	color: #ffffff;
+	font-family: 'Raleway',sans-serif;
+	font-size: 62px;
+	font-weight: 800;
+	line-height: 72px;
+	margin: 0 0 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h3 { 
+	color: #ffffff;
+	font-family: 'Raleway',sans-serif;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 72px;
+	margin: 0 0 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+tr {
+	text-transform: uppercase;
+}
