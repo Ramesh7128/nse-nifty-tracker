@@ -43,7 +43,7 @@ def nse_data_scraper():
 			except Exception as e:
 				print e, row_index
 	except Exception, e:
-		print e
+		print e, "this is the error"
 	finally:
 		driver.quit()
 		display.stop()
