@@ -13,7 +13,7 @@ import redis
 import time
 
 r = redis.Redis(host='localhost', port=6379)
-display = Display(visible=0)
+display = Display(visible=0, size=(1024, 768))
 display.start()
 prof = webdriver.FirefoxProfile()
 starttime=time.time()
