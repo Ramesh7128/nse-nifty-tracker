@@ -22,7 +22,7 @@ def nse_data_scraper():
 	"""
 	try:
 		prof = webdriver.FirefoxProfile()
-		display = Display(visible=1, size=(1024, 768))
+		display = Display(visible=0, size=(1024, 768))
 		display.start()
 		driver = webdriver.Firefox(firefox_profile = prof)
 		driver.get('https://www.nseindia.com/live_market/dynaContent/live_analysis/top_gainers_losers.htm?cat=G')
