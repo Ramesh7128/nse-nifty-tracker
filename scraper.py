@@ -44,10 +44,11 @@ def nse_data_scraper():
 			try:
 				r.hmset("stock:%s" % str(row_index), stock)
 			except Exception as e:
-				# logge the error
+				print e
 				pass
 	except Exception, e:
 		# log errors
+		print e
 		pass
 	finally:
 		driver.quit()
