@@ -43,13 +43,13 @@ def nse_data_scraper():
 				stock[heading[col_index]] = cols[col_index].find(text=True)
 			try:
 				print stock
+				float(stock['% Change'])
 				r.hmset("stock:%s" % str(row_index), stock)
 			except Exception as e:
-				print e
+				#log errors
 				pass
 	except Exception, e:
 		# log errors
-		print e
 		pass
 	finally:
 		driver.quit()
