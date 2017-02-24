@@ -32,7 +32,7 @@ function ajaxPolling() {
     }).done(function (data) {
         append_to_dom(data);
     }).always(function () {
-        setTimeout(doPoll, 60000);
+        setTimeout(ajaxPolling, 60000);
     })
 }
 
