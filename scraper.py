@@ -16,7 +16,6 @@ r = redis.Redis(host='localhost', port=6379)
 display = Display(visible=0, size=(1024, 768))
 display.start()
 prof = webdriver.FirefoxProfile()
-driver = webdriver.Firefox(firefox_profile = prof)
 starttime=time.time()
 
 
@@ -25,6 +24,7 @@ def nse_data_scraper():
 	scraper function which gets called every 5 mins
 	"""
 	try:
+		driver = webdriver.Firefox(firefox_profile = prof)
 		driver.get('https://www.nseindia.com/live_market/dynaContent/live_analysis/top_gainers_losers.htm?cat=G')
 		page_source = driver.page_source
 		soup = BeautifulSoup(page_source, 'html.parser')
@@ -44,10 +44,9 @@ def nse_data_scraper():
 			try:
 				r.hmset("stock:%s" % str(row_index), stock)
 			except Exception as e:
-				print e
+				# logge the error
+				pass
 	except Exception, e:
-		print e
-	finally:
 		driver.quit()
 		display.stop()
 
