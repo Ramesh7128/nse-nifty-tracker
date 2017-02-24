@@ -42,6 +42,7 @@ def nse_data_scraper():
 			for col_index in range(len(cols)):
 				stock[heading[col_index]] = cols[col_index].find(text=True)
 			try:
+				print stock
 				r.hmset("stock:%s" % str(row_index), stock)
 			except Exception as e:
 				print e
